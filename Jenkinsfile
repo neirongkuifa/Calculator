@@ -11,13 +11,13 @@ pipeline{
 
         stage('Build'){
             steps{
-                /usr/local/bin/mvn compile
+                tool name: 'maven 3.6.1', type: 'maven' test
             }
         }
 
         stage('Test'){
             steps{
-                /usr/local/bin/mvn test
+                tool name: 'maven 3.6.1', type: 'maven' test
             }
         }
     }
