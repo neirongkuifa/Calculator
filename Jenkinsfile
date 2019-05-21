@@ -5,6 +5,7 @@ pipeline{
     stages{
         stage('Git'){
             steps{
+                sh "rm -r Calculator"
                 sh "git clone 'https://github.com/neirongkuifa/Calculator.git'"
             }
         }
