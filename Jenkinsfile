@@ -10,7 +10,7 @@ pipeline{
             }
         }
 
-        stage('Build'){
+        stage('Compile'){
             steps{
                 sh "/usr/local/bin/mvn compile"
             }
@@ -19,6 +19,12 @@ pipeline{
         stage('Test'){
             steps{
                 sh "/usr/local/bin/mvn test"
+            }
+        }
+
+        stage('Package'){
+            steps{
+                sh "/usr/local/bin/mvn package"
             }
         }
     }
