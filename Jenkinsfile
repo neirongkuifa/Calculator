@@ -5,19 +5,19 @@ pipeline{
     stages{
         stage('Git'){
             steps{
-                git clone "https://github.com/neirongkuifa/Calculator.git"
+                sh "git clone 'https://github.com/neirongkuifa/Calculator.git'"
             }
         }
 
         stage('Build'){
             steps{
-                tool name: 'maven 3.6.1', type: 'maven' test
+                sh "/usr/local/bin/mvn compile"
             }
         }
 
         stage('Test'){
             steps{
-                tool name: 'maven 3.6.1', type: 'maven' test
+                sh "/usr/local/bin/mvn test"
             }
         }
     }
