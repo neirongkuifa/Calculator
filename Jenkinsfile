@@ -11,13 +11,13 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "/usr/local/bin/mvn compile"
+                sh "mvn compile"
             }
         }
 
         stage('Test'){
             steps{
-                sh "/usr/local/bin/mvn test"
+                sh "mvn test"
             }
         }
     }
