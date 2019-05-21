@@ -3,15 +3,21 @@ pipeline{
     agent any
 
     stages{
+        stage('Git'){
+            steps{
+                git clone "https://github.com/neirongkuifa/Calculator.git"
+            }
+        }
+
         stage('Build'){
             steps{
-                mvn compile
+                /usr/local/bin/mvn compile
             }
         }
 
         stage('Test'){
             steps{
-                mvn test
+                /usr/local/bin/mvn test
             }
         }
     }
