@@ -21,7 +21,7 @@
   <distributionManagement>
     <repository>
       <id>ssh-repository</id>
-      <url>scpexe://repository.mycompany.com/repository</url>
+      <url>scpexe://ec2-18-208-156-108.compute-1.amazonaws.com/Calculator</url>
     </repository>
   </distributionManagement>
   <build>
