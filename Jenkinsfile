@@ -11,18 +11,10 @@ pipeline{
             }
         }
 
-        stage('Build'){
+        stage('Deploy'){
             steps{
-                sh "/usr/local/bin/mvn package"
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                sh "/usr/local/bin/mvn deploy"
             }
         }
-
-        // stage(''){
-        //     steps{
-        //         sh "/usr/local/bin/mvn deploy"
-        //     }
-        // }
-
     }
 }

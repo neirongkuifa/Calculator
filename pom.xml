@@ -21,7 +21,7 @@
   <distributionManagement>
     <repository>
       <id>ssh-repository</id>
-      <url>ec2-18-208-156-108.compute-1.amazonaws.com</url>
+      <url>scpexe://repository.mycompany.com/repository</url>
     </repository>
   </distributionManagement>
   <build>
